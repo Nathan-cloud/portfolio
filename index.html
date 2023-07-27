@@ -23,6 +23,14 @@
 		/>
 
 		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("OmtGd1JtmeU60Y4GR");
+   })();
+</script>
 	</head>
 	<body>
 		<!--preloader starts-->
@@ -581,29 +589,9 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div
-							class="single-contact text-center wow fadeInDown"
-							data-wow-delay="0.4s"
-						>
-							<i class="fa fa-home"></i>
-							<h2>Location</h2>
-							<p>kigali Rwanda</p>
-							<!--edit here-->
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div
-							class="single-contact text-center wow fadeInDown"
-							data-wow-delay="0.6s"
-						>
-							<i class="fa fa-phone"></i>
-							<h2>Phone:</h2>
-							<p>(+250) 732801963</p>
-							<!--edit here-->
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
+
+
+					<div class="col-md-6 col-sm-6">
 						<div
 							class="single-contact text-center wow fadeInDown"
 							data-wow-delay="0.8s"
@@ -614,7 +602,7 @@
 							<!--edit here-->
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
+					<div class="col-md-6 col-sm-6">
 						<div
 							class="single-contact text-center wow fadeInDown"
 							data-wow-delay="1s"
@@ -628,21 +616,8 @@
 									><i class="fa fa-facebook"></i
 								></a>
 								<!--your facebook profile link here-->
-								<a
-									href="https://www.linkedin.com/in/nathan-morgan-d-2820981b0/"
-									target="_blank"
-									><i class="fa fa-linkedin"></i
-								></a>
-								<!--your linkedin profile link here-->
-								<a href="https://twitter.com/DNathanMorgan1" target="_blank"
-									><i class="fa fa-twitter"></i
-								></a>
-								<!--your twitter profile link here-->
-								<a
-									href="https://www.instagram.com/nathanmorgan_official/"
-									target="_blank"
-									><i class="fa fa-instagram"></i
-								></a>
+
+
 								<!--your pinterest profile link here-->
 							</div>
 						</div>
@@ -654,7 +629,7 @@
 						<form
 							id="contact-form"
 							method="post"
-							action="https://mourithemes.com/mason/mason/contact.php"
+							action=""
 							class="wow fadeInDown"
 							data-wow-delay="1.2s"
 						>
@@ -708,7 +683,7 @@
 										</div>
 									</div>
 									<div class="col-md-12">
-										<button class="btn btn-send" value="">Send message</button>
+										<button class="btn btn-send" onclick="sendMail()">Send message</button>
 									</div>
 								</div>
 							</div>

@@ -1,6 +1,7 @@
 /** @format */
 
 $(document).ready(function () {
+
 	'use strict';
 
 	//********* page loader js
@@ -9,6 +10,33 @@ $(document).ready(function () {
 		$('.loader_bg').fadeToggle();
 	}, 1000);
 
+
+	function sendMail(){
+		var params = {
+			name: document.getElementById("form_name").value , 
+			email: document.getElementById("form_email").value ,
+			message: document.getElementById("form_message").value ,
+		};
+	
+	const serviceID = "service_7avxanp"
+	const templateId = "template_5zn96ih"
+	
+	emailjs
+		.send(serviceID, templateId, params)
+		.then((res) => {
+			 document.getElementById("form_name").value = "", 
+			 document.getElementById("form_email").value = "",
+			 document.getElementById("form_message").value = "",
+			 console.log(res);
+			 alert("Your Message was sent successfully")
+	
+		})
+		.catch((err) => console.log(err));
+	
+	
+	
+	
+	}
 	//********** menu background color change while scroll
 
 	$(window).on('scroll', function () {
@@ -120,4 +148,8 @@ $(document).ready(function () {
 		},
 		midClick: true,
 	});
+
+
+
+
 });
